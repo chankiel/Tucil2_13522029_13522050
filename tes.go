@@ -43,10 +43,10 @@ func dnc(points []Point, iterat int) []Point {
 		return make([]Point, 0)
 	}
 	ls, mid, rs := sol(points)
-	fmt.Println(iterat)
-	fmt.Println(ls)
-	fmt.Println(mid)
-	fmt.Println(rs)
+	// fmt.Println(iterat)
+	// fmt.Println(ls)
+	// fmt.Println(mid)
+	// fmt.Println(rs)
 	leftRes := dnc(ls, iterat-1)
 	rightRes := dnc(rs, iterat-1)
 	return append(leftRes, append(mid, rightRes...)...)
@@ -62,26 +62,30 @@ func main() {
 	dc.Clear()
 
 	dc.SetRGB(0, 0, 0) // Black color
-	var p1, p2, p3, p4 Point
+	var p1, p2, p3, p4,p5 Point
 	p1.x = 100
 	p1.y = 500
-	p2.x = 400
+	p2.x = 100
 	p2.y = 100
 	p3.x = 700
 	p3.y = 550
 	p4.x = 500
 	p4.y = 100
+	p5.x = 750
+	p5.y = 50
 	dc.DrawLine(p1.x, p1.y, p2.x, p2.y)
-	dc.DrawLine(p2.x, p2.y, p4.x, p4.y)
-	dc.DrawLine(p4.x, p4.y, p3.x, p3.y)
+	dc.DrawLine(p2.x, p2.y, p3.x, p3.y)
+
+	// dc.DrawLine(p5.x, p5.y, p3.x, p3.y)
 	res := []Point{p1}
-	res = append(res, dnc([]Point{p1,p2,p4,p3},8)...)
+	res = append(res, dnc([]Point{p1,p2,p3},20)...)
 	res = append(res, p3)
-	// fmt.Println(res)
-	for i:=0;i<len(res)-1;i++{
-		dc.DrawLine(res[i].x,res[i].y,res[i+1].x,res[i+1].y)
-	}
+	fmt.Println(len(res))
 	dc.Stroke()
+	for i:=0;i<len(res)-1;i++{
+		dc.DrawPoint(res[i].x,res[i].y,1)
+		dc.Stroke()
+	}
 	// Save the image to a file
 	dc.SavePNG("line.png")
 }
