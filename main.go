@@ -81,5 +81,5 @@ func main() {
 		dc.Stroke()
 	}
 	// Save the image to a file
-	dc.SavePNG("kntl.png")
+	dc.SavePNG("curve.png")
 }
