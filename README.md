@@ -25,6 +25,9 @@ Beberapa Fitur dalam Program Visualisasi Kurva Beizer:
 
 ## Screenshots
 ![GUI Screenshot](./img/Tampilan.png)
+<center>Tampilan GUI Website Visualizer Kurva Bezier</center>
+![Contoh Pemakaian](./img/Contoh.png)
+<center>Contoh Pemakaian Website</center>
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
