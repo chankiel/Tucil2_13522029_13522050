@@ -1,6 +1,6 @@
 import { midP } from "./util";
 
-function sol(points) {
+function iterateFind(points) {
     let lengthArr = points.length;
     let arr = points.slice(); 
     let leftArr = [points[0]];
@@ -23,16 +23,16 @@ function sol(points) {
     return [leftArr, [arr[0]], rightArr, midPoints];
 }
 
-export function dnc(points, iteration, depth) {
+export function dncBeizer(points, iteration, depth) {
     if (depth === 0) {
         return { points: [], midPointsHistory: [] };
     }
 
     // divide problem to leftside and rightside
-    const [leftSide, mid, rightSide, currentMidPoints] = sol(points);
+    const [leftSide, mid, rightSide, currentMidPoints] = iterateFind(points);
     // apply dnc to each subproblem
-    let leftResult = dnc(leftSide, iteration, depth - 1);
-    let rightResult = dnc(rightSide, iteration, depth - 1);
+    let leftResult = dncBeizer(leftSide, iteration, depth - 1);
+    let rightResult = dncBeizer(rightSide, iteration, depth - 1);
 
     return {
         points : (leftResult.points).concat(mid).concat(rightResult.points),
