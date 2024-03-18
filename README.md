@@ -29,18 +29,15 @@ Beberapa Fitur dalam Program Visualisasi Kurva Beizer:
 
 
 ## Setup
-Untuk menjalankan projek ini, sebelumnya diperlukan penginstalan:
-- Node.js dan npm
-  1. Download Node.js dan npm [di sini](https://nodejs.org/en/download)
-  2. Clone Repository
-     Jalankan command berikut pada terminal anda
-     `git clone https://github.com/chankiel/Tucil2_13522029_13522050.git`
-  3. Navigasi ke direktori projek, dengan menjalankan command cd berikut sesuai direktori di komputer anda
-     `cd <project-directory>`
-  4. Install depedensi yang dibutuhkan dengan npm. Jalankan command berikut
-     `npm install`
-
-
+Untuk menjalankan projek ini, sebelumnya diperlukan penginstalan beberapa komponen dengan langkah-langkah sebagai berikut:
+1. Download Node.js dan npm [di sini](https://nodejs.org/en/download)
+2. Clone Repository
+   Jalankan command berikut pada terminal anda
+   `git clone https://github.com/chankiel/Tucil2_13522029_13522050.git`
+3. Navigasi ke direktori projek, dengan menjalankan command cd berikut sesuai direktori di komputer anda
+   `cd <project-directory>`
+4. Install depedensi yang dibutuhkan dengan npm. Jalankan command berikut
+   `npm install`
 
 ## Usage
 1. Navigasi ke direktori projek, dengan menjalankan command cd berikut sesuai direktori di komputer anda
