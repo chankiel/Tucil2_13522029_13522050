@@ -13,7 +13,8 @@ export function bfRecursive(points, t){
     }
 }
 
-export function bfBezier(points,nPoints){
+export function bfBezier(points,iterasi){
+    let nPoints = (2**iterasi)+1
     const arrPoints = [];
     for (let i=0;i<nPoints;i++){
         const t = i/(nPoints-1);
