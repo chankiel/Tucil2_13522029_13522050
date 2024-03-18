@@ -1,19 +1,6 @@
-class Point {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-    }
-}
+import { midP } from "./util";
 
-// calculate middle point between point1 and point2
-function midP(point1, point2) {
-    return new Point(
-        0.5 * (point1.x + point2.x),
-        0.5 * (point1.y + point2.y)
-    );
-}
-
-function sol(points) {
+function iterateFind(points) {
     let lengthArr = points.length;
     let arr = points.slice(); 
     let leftArr = [points[0]];
@@ -36,16 +23,16 @@ function sol(points) {
     return [leftArr, [arr[0]], rightArr, midPoints];
 }
 
-export function dnc(points, iteration, depth) {
+export function dncBezier(points, iteration, depth) {
     if (depth === 0) {
         return { points: [], midPointsHistory: [] };
     }
 
     // divide problem to leftside and rightside
-    const [leftSide, mid, rightSide, currentMidPoints] = sol(points);
+    const [leftSide, mid, rightSide, currentMidPoints] = iterateFind(points);
     // apply dnc to each subproblem
-    let leftResult = dnc(leftSide, iteration, depth - 1);
-    let rightResult = dnc(rightSide, iteration, depth - 1);
+    let leftResult = dncBezier(leftSide, iteration, depth - 1);
+    let rightResult = dncBezier(rightSide, iteration, depth - 1);
 
     return {
         points : (leftResult.points).concat(mid).concat(rightResult.points),
