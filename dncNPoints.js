@@ -23,7 +23,7 @@ function iterateFind(points) {
     return [leftArr, [arr[0]], rightArr, midPoints];
 }
 
-export function dncBeizer(points, iteration, depth) {
+export function dncBezier(points, iteration, depth) {
     if (depth === 0) {
         return { points: [], midPointsHistory: [] };
     }
@@ -31,8 +31,8 @@ export function dncBeizer(points, iteration, depth) {
     // divide problem to leftside and rightside
     const [leftSide, mid, rightSide, currentMidPoints] = iterateFind(points);
     // apply dnc to each subproblem
-    let leftResult = dncBeizer(leftSide, iteration, depth - 1);
-    let rightResult = dncBeizer(rightSide, iteration, depth - 1);
+    let leftResult = dncBezier(leftSide, iteration, depth - 1);
+    let rightResult = dncBezier(rightSide, iteration, depth - 1);
 
     return {
         points : (leftResult.points).concat(mid).concat(rightResult.points),
