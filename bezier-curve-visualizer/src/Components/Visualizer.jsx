@@ -1,7 +1,7 @@
 import React, {useState } from 'react'
 import Input from './Input'
 import Bezier from './Bezier'
-import { dnc } from '../dncNPoints'
+import { dncBezier } from '../dncNPoints'
 import { bfBezier } from '../bfNPoints'
 
 export default function Visualizer() {
@@ -39,7 +39,7 @@ export default function Visualizer() {
     function fetchBezierPoints(controlPoints, iterations, isUsingDNC){
       setSelectedIteration(0)
       const startTime = performance.now()
-      const result = isUsingDNC? dnc(controlPoints,iterations,iterations) : bfBezier(controlPoints,iterations)
+      const result = isUsingDNC? dncBezier(controlPoints,iterations,iterations) : bfBezier(controlPoints,iterations)
       const endTime = performance.now()
       // console.log(result)
       if (isUsingDNC){

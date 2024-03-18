@@ -1,5 +1,7 @@
 import { Point } from "./util";
 
+/* Fungsi untuk membangun persamaan kurva secara rekursif dan  
+   menentukan hasil nilai fungsi dengan input t */
 export function bfRecursive(points, t){
     if (points.length==1){
         return points[0];
@@ -13,6 +15,8 @@ export function bfRecursive(points, t){
     }
 }
 
+/* Fungsi untuk mengiterasi nPoints titik dan meng-list nilai hasil 
+   fungsi bfRecursive untuk tiap titik */
 export function bfBezier(points,iterasi){
     let nPoints = (2**iterasi)+1
     const arrPoints = [];

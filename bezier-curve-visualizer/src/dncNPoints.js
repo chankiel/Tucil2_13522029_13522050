@@ -1,6 +1,8 @@
 import { midP } from "./util";
 
-function sol(points) {
+/* Fungsi untuk mengiterasi list koordinat titik (points) hingga mendapatkan
+ titik tengah hasil iterasi */
+function iterateFind(points) {
     let lengthArr = points.length;
     let arr = points.slice(); 
     let leftArr = [points[0]];
@@ -23,12 +25,13 @@ function sol(points) {
     return [leftArr, [arr[0]], rightArr, midPoints];
 }
 
-export function dnc(points, iteration, depth) {
+/* Fungsi rekursif sebagai bentuk implementasi Divide and Conquer */
+export function dncBezier(points, iteration, depth) {
     if (depth === 0) {
         return { points: [], midPointsHistory: [] };
     }
 
-    const [leftSide, mid, rightSide, currentMidPoints] = sol(points);
+    const [leftSide, mid, rightSide, currentMidPoints] = iterateFind(points);
     let leftResult = dnc(leftSide, iteration, depth - 1);
     let rightResult = dnc(rightSide, iteration, depth - 1);
 

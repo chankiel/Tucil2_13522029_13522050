@@ -23,7 +23,7 @@ export default function Bezier({controlPoints, bezierPoints, midPointsHistory, s
         return null
       }
         return points.map((point, idx) => (
-            <Point key={idx} x={point.x} y={point.y} color={color} opacity={opacity*2}/>
+            <Point key={idx} x={point.x} y={point.y} color={color} opacity={opacity*2} svgCircleProps={{r:4}}/>
         ))
       }
   

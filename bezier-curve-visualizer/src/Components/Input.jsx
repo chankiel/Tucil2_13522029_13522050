@@ -15,7 +15,7 @@ export default function Input({onSubmit, onControlPointChange, onIterationChange
     if (controlPointsInput === '' || iterationInput === '' || iterationInput < 1) {
       return false;
     }
-    const pattern = /^(-?\d+\s+-?\d+)(,-?\d+\s+-?\d+)*$/;
+    const pattern = /^(-?\d+(\.\d+)?\s+-?\d+(\.\d+)?)(,-?\d+(\.\d+)?\s+-?\d+(\.\d+)?)*$/;
     if (!pattern.test(controlPointsInput)){
       return false;
     }
