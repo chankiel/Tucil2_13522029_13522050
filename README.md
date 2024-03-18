@@ -25,9 +25,7 @@ Beberapa Fitur dalam Program Visualisasi Kurva Beizer:
 
 ## Screenshots
 ![GUI Screenshot](./img/Tampilan.png)
-<center>Tampilan GUI Website Visualizer Kurva Bezier</center>
 ![Contoh Pemakaian](./img/Contoh.png)
-<center>Contoh Pemakaian Website</center>
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
@@ -59,7 +57,7 @@ Untuk menjalankan projek ini, sebelumnya diperlukan penginstalan beberapa kompon
 Status Projek: Selesai
 
 ## Contact
-Dibuat oleh [@IgnatiusJhonHezkielChan](https://github.com/chankiel) dan [@KaylaNamiraMariadi](https://github.com/kaylanamira)
+Dibuat oleh [@IgnatiusJhonHezkielChan](https://github.com/chankiel) (13522029) dan [@KaylaNamiraMariadi](https://github.com/kaylanamira) (13522050)
 
 
 <!-- Optional -->
