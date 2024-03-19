@@ -32,8 +32,8 @@ export function dncBezier(points, iteration, depth) {
     }
 
     const [leftSide, mid, rightSide, currentMidPoints] = iterateFind(points);
-    let leftResult = dnc(leftSide, iteration, depth - 1);
-    let rightResult = dnc(rightSide, iteration, depth - 1);
+    let leftResult = dncBezier(leftSide, iteration, depth - 1);
+    let rightResult = dncBezier(rightSide, iteration, depth - 1);
 
     return {
         points : (leftResult.points).concat(mid).concat(rightResult.points),
