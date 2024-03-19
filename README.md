@@ -40,7 +40,8 @@ Untuk menjalankan projek ini, sebelumnya diperlukan penginstalan beberapa kompon
    ```npm install```
 
 ## Usage
-1. Navigasi ke direktori projek, dengan menjalankan command cd berikut sesuai direktori di komputer anda
+Untuk menjalankan Visualizer melalui Website, dapat menjalankan langkah-langkah berikut.
+1. Navigasi ke direktori projek, dengan menjalankan command cd berikut
    ```cd src/bezier-curve-visualizer```
 2. Jalankan command berikut untuk menjalankan localhost website
    ```npm run dev```
@@ -50,8 +51,13 @@ Untuk menjalankan projek ini, sebelumnya diperlukan penginstalan beberapa kompon
    ```x1 y1,x2 y2,x3 y3,...,xn yn```
 5. Masukkan jumlah iterasi yang ingin dilakukan (angka minimal 1)
 6. Tekan tombol visualisasi sesuai jenis algoritma yang diinginkan (Divide and Conquer atau Brute Force)
-
-
+----------
+Untuk backup dengan Python, dapat menjalankan langkah-langkah berikut (dengan asumsi Python sudah terinstall).
+1. Navigasi ke folder backup dengan menjalankan command cd berikut
+   ```cd src/bezier-curve-visualizer/src/backup```
+2. Jalankan program Python dengan command berikut.
+   ```python main.py```
+3. Ikuti instruksi yang diberikan untuk melakukan visualisasi Kurva Bezier
 ## Project Status
 Status Projek: Selesai
 
