@@ -21,7 +21,7 @@ Beberapa Fitur dalam Program Visualisasi Kurva Beizer:
 - Visualisasi hasil Kurva Bezier pada n titik kontrol dan k iterasi dengan Divide and Conquer
 - Visualisasi proses membangun Kurva Bezier pada tiap tahap iterasi
 - Tampilan Runtime Program Brute Force ataupun Divide and Conquer
-
+- Backup File Python untuk Visualisasi Kurva Bezier (Jika melalui web tidak responsif untuk jumlah iterasi banyak)
 
 ## Screenshots
 ![GUI Screenshot](./img/Tampilan.png)
@@ -32,23 +32,22 @@ Beberapa Fitur dalam Program Visualisasi Kurva Beizer:
 ## Setup
 Untuk menjalankan projek ini, sebelumnya diperlukan penginstalan beberapa komponen dengan langkah-langkah sebagai berikut:
 1. Download Node.js dan npm [di sini](https://nodejs.org/en/download)
-2. Clone Repository
-   Jalankan command berikut pada terminal anda
-   `git clone https://github.com/chankiel/Tucil2_13522029_13522050.git`
+2. Clone Repository dengan menjalankan command berikut pada terminal anda
+   ```git clone https://github.com/chankiel/Tucil2_13522029_13522050.git```
 3. Navigasi ke direktori projek, dengan menjalankan command cd berikut sesuai direktori di komputer anda
-   `cd <project-directory>`
+   ```cd <project-directory>/Tucil2_13522029_13522050/src/bezier-curve-visualizer```
 4. Install depedensi yang dibutuhkan dengan npm. Jalankan command berikut
-   `npm install`
+   ```npm install```
 
 ## Usage
 1. Navigasi ke direktori projek, dengan menjalankan command cd berikut sesuai direktori di komputer anda
-   `cd src/bezier-curve-visualizer`
+   ```cd src/bezier-curve-visualizer```
 2. Jalankan command berikut untuk menjalankan localhost website
-   `npm run dev`
+   ```npm run dev```
 3. Akses website dengan mengunjungi link localhost berikut.
-   `http://localhost:5173`
+   ```http://localhost:5173```
 4. Masukkan koordinat titik-titik sesuai format yang disediakan (minimal 3 titik)
-   `x1 y1,x2 y2,x3 y3,...,xn yn`
+   ```x1 y1,x2 y2,x3 y3,...,xn yn```
 5. Masukkan jumlah iterasi yang ingin dilakukan (angka minimal 1)
 6. Tekan tombol visualisasi sesuai jenis algoritma yang diinginkan (Divide and Conquer atau Brute Force)
 
