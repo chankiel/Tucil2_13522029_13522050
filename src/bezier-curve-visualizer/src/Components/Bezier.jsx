@@ -9,7 +9,7 @@ function inPairs(arr) {
     return pairs
 }
 
-export default function Bezier({controlPoints, bezierPoints, midPointsHistory, selectedIteration, isUsingDNC}) {
+export default function Bezier({controlPoints, bezierPoints, midPointsHistory, selectedIteration, isUsingDNC, selectedMidpoints}) {
     const opacity = 1 - (2 * 0.5 - 1) ** 6
   
     function plotLineSegments(pointPath, color, opacity) {
@@ -27,7 +27,7 @@ export default function Bezier({controlPoints, bezierPoints, midPointsHistory, s
         ))
       }
   
-    const selectedMidpoints = isUsingDNC && midPointsHistory.filter(midpoint => midpoint.iteration <= selectedIteration);
+    // const selectedMidpoints = isUsingDNC && midPointsHistory.filter(midpoint => midpoint.iteration <= selectedIteration);
     return (
       <Mafs
           viewBox={{ x: [-5, 5], y: [-5, 5] }}

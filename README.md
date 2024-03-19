@@ -42,14 +42,14 @@ Untuk menjalankan projek ini, sebelumnya diperlukan penginstalan beberapa kompon
 
 ## Usage
 1. Navigasi ke direktori projek, dengan menjalankan command cd berikut sesuai direktori di komputer anda
-   `cd <project-directory>`
+   `cd src/bezier-curve-visualizer`
 2. Jalankan command berikut untuk menjalankan localhost website
    `npm run dev`
 3. Akses website dengan mengunjungi link localhost berikut.
    `http://localhost:5173`
-4. Masukkan koordinat titik-titik sesuai format yang disediakan
+4. Masukkan koordinat titik-titik sesuai format yang disediakan (minimal 3 titik)
    `x1 y1,x2 y2,x3 y3,...,xn yn`
-5. Masukkan jumlah iterasi yang ingin dilakukan
+5. Masukkan jumlah iterasi yang ingin dilakukan (angka minimal 1)
 6. Tekan tombol visualisasi sesuai jenis algoritma yang diinginkan (Divide and Conquer atau Brute Force)
 
 

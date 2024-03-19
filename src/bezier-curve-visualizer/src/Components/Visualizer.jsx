@@ -74,14 +74,25 @@ export default function Visualizer() {
     function handleModeChange(mode){
       setisUsingDNC(mode)
     }
+  
+  const selectedCurve = [controlPoints[0]]
+  const selectedMidpoints = isUsingDNC && dncData.midPointsHistory.filter(midpoint => midpoint.iteration <= selectedIteration);
+  if (selectedMidpoints){
+    selectedMidpoints.map(data => (data.midPoints.map(item => {
+      if (item.length==1){
+        selectedCurve.push(...item)
+      }})))
+    selectedCurve.push(controlPoints[controlPoints.length-1])
+  }
 
   const data = isUsingDNC? dncData : bruteForceData
+  const resultPoints = (selectedIteration === 0 || selectedIteration === iteration) ? data.result : selectedCurve
   {console.log(data)}
   return <>
     <div className='app'>
       <h1>Bézier Curve Visualizer</h1>
       <div className='box'>
-        <Bezier controlPoints={controlPoints} bezierPoints={data.result} midPointsHistory={dncData.midPointsHistory} selectedIteration={selectedIteration} isUsingDNC={isUsingDNC}/>
+        <Bezier controlPoints={controlPoints} bezierPoints={resultPoints} midPointsHistory={dncData.midPointsHistory} selectedIteration={selectedIteration} isUsingDNC={isUsingDNC} selectedMidpoints={selectedMidpoints}/>
       </div>
       <div className='interaction-container'>
         <Input onSubmit={fetchBezierPoints} onControlPointChange={handleControlPointChange} onIterationChange={handleIterationChange} onModeChange={handleModeChange}/>
