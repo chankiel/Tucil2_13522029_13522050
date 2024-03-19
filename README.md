@@ -21,7 +21,7 @@ Beberapa Fitur dalam Program Visualisasi Kurva Beizer:
 - Visualisasi hasil Kurva Bezier pada n titik kontrol dan k iterasi dengan Divide and Conquer
 - Visualisasi proses membangun Kurva Bezier pada tiap tahap iterasi
 - Tampilan Runtime Program Brute Force ataupun Divide and Conquer
-- Backup File Python untuk Visualisasi Kurva Bezier (Jika melalui web tidak responsif untuk jumlah iterasi banyak)
+- Backup File Python untuk Visualisasi Kurva Bezier (Jika tidak responsif melalui web untuk jumlah iterasi banyak)
 
 ## Screenshots
 ![GUI Screenshot](./img/Tampilan.png)
